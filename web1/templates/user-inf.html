@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userinf</title>
+</head>
+<body>
+    {% for user in userlist %}
+        id: {{ user.id }}<br>
+        nickname: {{ user.nickname }}<br>
+        phone: {{ user.phonenum }}<br>
+    {% endfor %}
+</body>
+</html>

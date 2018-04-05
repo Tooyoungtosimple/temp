@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../../static/CSS/book-dky.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../static/js/jquery-3.2.1.min.js"></script>
+<script src="../../static/js/book-dky.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="nav">
+			<div id="logo">
+				<a href="/" target="_self"  title="首页">教材循环平台</a>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="wrap">
+			<div class="top">
+			<!--系别-->
+				<div class="top-row">
+					<span class="hd">系别：</span>
+					<div class="lb">
+						<ul>
+							<li class="lb-item">
+								<a href="#">全部</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">电子信息工程系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">计算机科学与技术系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">通信工程系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">保密行政管理系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">信息安全系</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--年级-->
+				<div class="top-row">
+					<span class="hd">年级：</span>
+					<div class="lb">
+						<ul>
+							<li class="lb-item">
+								<a href="#">全部</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大一上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大一下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大二上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大二下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大三上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大三下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大四上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大四下</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--书名-->
+				<div class="top-row">
+					<span class="hd">书名：</span>
+					<div class="lb">
+						<ul>
+							<li class="lb-item">
+								<a href="#">全部</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">中国近代史纲要</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">思想道德修养与法律基础</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">军事理论</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">思想道德修养与法律基础</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">中国近代史纲要</a>
+							</li>
+							
+							<li class="lb-item">
+								<a href="#">军事理论</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">中国近代史纲要</a>
+							</li>
+							
+							<li class="lb-item">
+								<a href="#">中国近代史纲要</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">思想道德修养与法律基础</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">军事理论</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="book-list">
+				<div class="books-list">
+					<ul class="clearfloat">
+                        {% for indent in indentlist %}
+						<div class="card-container">
+							<div class="card-top">
+								<h1>{{ indent.book.title }}</h1>
+								<div class="card-label">
+									<label>预 订</label>
+								</div>
+							</div>
+							<a href="#" class="card">
+								<span>提供者：</span>
+								<h3>{{ indent.seller.nickname }}</h3>
+								<span> {{ indent.seller.department}}</span>
+							</a>
+						</div>
+                        {% endfor %}
+					</ul>
+				</div>
+				<div class="page">
+					<span class="disabled_page">首页</span>
+					<span class="disabled_page">上一页</span>
+					<a href="javascript:void(0)" class="active page-num">1</a>
+					<a class="page-num" href="/course/list?c=fe&amp;page=2">2</a>
+					<a href="#">下一页</a>
+					<a href="#">尾页</a>
+				</div>
+				<div id="footer">
+					<div class="waper">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

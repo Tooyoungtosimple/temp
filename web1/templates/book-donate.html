@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>赠书界面</title>
+<link href="{{ static }}/CSS/book-donate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{{ static }}/js/jquery-3.2.1.min.js"></script>
+<script src="{{ static }}/js/book-donate.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="header">
+		<div id="nav">
+			<div id="logo">
+				<a href="/" target="_self"  title="首页">教材循环平台</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="wrap">
+			<div class="top">
+			<!--系别-->
+				<div class="top-row">
+					<span class="hd">系别：</span>
+					<div class="lb">
+						<ul>
+							<li class="lb-item">
+								<a href="#">全部</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">电子信息工程系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">计算机科学与技术系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">通信工程系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">保密行政管理系</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">信息安全系</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--年级-->
+				<div class="top-row">
+					<span class="hd">年级：</span>
+					<div class="lb">
+						<ul>
+							<li class="lb-item">
+								<a href="#">全部</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大一上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大一下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大二上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大二下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大三上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大三下</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大四上</a>
+							</li>
+							<li class="lb-item">
+								<a href="#">大四下</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--书名-->
+				<div class="top-row">
+					<span class="hd">书名：</span>
+					<div class="lb">
+						<form action="" method="post" id="form0">
+							<ul>
+								{% for book in books %}
+								<li class="lb-item">
+									<a href="{{ linkurl }}">{{ book.title }}</a>
+									<input type="checkbox" name={{ book.title }} value="">
+								</li>
+                                {% endfor %}
+                                <!--
+								<li class="lb-item">
+									<a href="#">思想道德修养与法律基础</a>
+									<input type="checkbox" name="b" value="">
+								</li>
+								<li class="lb-item">
+									<a href="#">军事理论</a>
+									<input type="checkbox" name="c" value="">
+								</li>
+								<li class="lb-item">
+									<a href="#">高等数学</a>
+									<input type="checkbox" name="d" value="">
+								</li>
+								-->
+							</ul>
+							<input type="submit" name="" value="提交" id="sub">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="f-wrap">
+			
+		</div>
+	</div>
+</body>
+</html>

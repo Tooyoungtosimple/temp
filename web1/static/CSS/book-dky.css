@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style: none;
+	display: block;
+}
+
+a{
+	text-decoration: none;
+}
+
+.clearfloat{
+	overflow: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    min-width: 1200px;
+    background-color: #edeff0;
+    color: #5e5e5e;
+}
+/*顶部样式*/
+#header {
+    background: #07111b;
+}
+
+#nav {
+    width: auto;
+    padding:0 20px;
+    height: 72px;
+    position: relative;
+        
+}
+
+#logo a {
+    width: 120px;
+    display: block;
+    height: 72px;
+    text-indent: 100%;
+}
+
+/*页面主体样式*/
+
+.main{
+	width:100%;
+	height: 1600px;
+	padding: 20px 0;
+}
+	/*中间的逐层搜索模块*/
+.wrap {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.wrap .top {
+    width: 1200px;
+    margin: auto;
+}
+
+.top-row{
+	padding: 16px 0 5px;
+    border-bottom: 1px solid #edf1f2;
+}
+
+.hd{
+	float:left;
+	width:52px;
+	height:20px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #07111b;
+    text-align: right;
+}
+
+.lb{
+	margin-left: 64px;
+}
+
+.lb-item{
+	display: inline-block;
+    margin: 0 4px;
+}
+
+a:link,a:visited{
+	color: #14191e;
+}
+
+a:hover{
+	color: red;
+}
+
+.lb-item a{
+	display: block;
+    line-height: 14px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/*下面的图书展示模块*/
+
+.container{
+	margin:0 auto;
+	width:1200px;
+}
+
+.book-list{
+	padding: 10px 0 20px;
+	
+}
+
+.card-container{
+	float: left;
+    margin: 0 0 18px 18px;
+    height: 256px;
+    width: 216px;
+    position: relative;
+    transition: .3s all linear;
+    background-color: #f3f5f7;
+}
+
+.card-top{
+	position: relative;
+	width:100%;
+	height:120px;
+	border-radius: 8px;
+	background-image: linear-gradient(to bottom,#3300ff,#00ccff);
+	text-align: center;
+	color:#fff;
+}
+
+.card-top h1{
+	height:100%;
+	line-height:30px;
+}
+
+
+
+.card {
+	display: inline-block;
+	width:100%;
+	height:140px;
+	transition: all .3s ease;
+	padding: 12px 8px;
+}
+
+
+.card-label{
+	position: absolute;
+	bottom: 6px;
+	right:5px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.card-label:hover{
+	color: red;
+}
+
+.card-label label{
+	display: inline-block;
+	background-color: rgba(7,17,27,.4);
+	border-radius: 12px;
+	padding: 8px 14px;
+	font-weight:200;
+	cursor: pointer;
+}
+
+.card h3{
+	margin:10px 0;
+}
+
+.card span{
+	color: #93999F;
+}
+
+/*下面是页码模块*/
+
+.page{
+	margin:0 0 auto;
+	padding: 25px 0;
+	overflow: hidden;
+	clear:both;
+	text-align: center;
+	background-color: #f3f5f7;
+}
+
+.page .active{
+	background-color: #4d555d;
+	color: #fff;
+	border-radius: 16px;
+}
+
+.page a,.page span,.page-disabled {
+	padding: 0 4px;
+	min-width: 24px;
+	line-height: 32px;
+	font-size: 14px;
+	display: inline-block;
+	text-align: center;
+}
+
+/*下面是网页的底部*/
+
+#footer {
+	text-align: center;
+	background-color: #000;
+	border-top: 1px solid #e2e4e6;
+    font-size: 12px;
+    color: #787d82;
+    padding: 27px 0;
+    min-width: 620px;
+    width:100%;
+}
+
+#footer .waper {
+    width: auto;
+    max-width: 1200px;
+}
