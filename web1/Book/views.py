@@ -1,3 +1,4 @@
+#coding=UTF-8
 from django.shortcuts import render
 from Book.models import Indent,Book
 from User.models import User
